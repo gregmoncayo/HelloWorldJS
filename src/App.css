@@ -34,6 +34,30 @@
   display: flex;
 }
 
+.App-header3 {
+  font-size: calc(5px + 2vmin);
+}
+
+.App-font {
+  background-color: #ffffff;
+  align-items: center;
+  margin-left: 60px;
+  font-size: calc(5px + 2vmin);
+  color: #000000;
+  min-height: 25vh;
+  display: flex;
+  font-family: "Cambria",
+}
+
+.App-style {
+  margin-left: 70px;
+  text-align: left;
+  min-height: 25vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(2px + 2vmin);
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -605,6 +629,17 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 145px;
+}
+
+.word {
+  text-align: center;
+  line-height: 3.1;
 }
 
 @media (min-width: 576px) {
@@ -10092,4 +10127,8 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.w3-large {
+  font-size:18px!important
 }

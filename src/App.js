@@ -2,46 +2,33 @@
 import React from 'react';
 import logo from '../src/assets/img/Original.png';
 import './App.css';
+/* Components */
+import Home from './components/home';
+import About from './components/about';
+import Apps from './components/apps';
+import Websites from './components/websites';
+import Contact from './components/contact';
+import Privacy from './components/privacy';
+import Sent from './components/sent';
+
+import Nav from './Nav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div className="container">
-          <a className="navbar-brand">Home</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-            <ul className="navbar-nav flex-grow-1">
-              <li class="nav-item">
-                {/*eslint-disable-next-line jsx-a11y/anchor-has-content*/}
-                <a className="nav-link text-dark">About</a>
-              </li>
-              <li class="nav-item">
-                {/*eslint-disable-next-line jsx-a11y/anchor-has-content*/}
-                <a className="nav-link text-dark">Apps</a>
-              </li>
-              <li class="nav-item">
-                {/*eslint-disable-next-line jsx-a11y/anchor-has-content*/}
-                <a className="nav-link text-dark">Websites</a>
-              </li>
-              <li class="nav-item">
-                {/*eslint-disable-next-line jsx-a11y/anchor-has-content*/}
-                <a className="nav-link text-dark">Contact us</a>
-              </li>
-              <li class="nav-item">
-                {/*eslint-disable-next-line jsx-a11y/anchor-has-content*/}
-                <a className="nav-link text-dark">Privacy</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </nav>
-      <header className="App-header2">
-          <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Router>
+        <Nav />
+          <Switch>
+            <Route path="/" exact component = {Home}/>
+            <Route path="/about" component = {About}/>
+            <Route path="/apps" component = {Apps} />
+            <Route path="/websites" component = {Websites} />
+            <Route path="/contact" component = {Contact} />
+            <Route path="/privacy" component = {Privacy}/>
+            <Route path="/sent" component = {Sent} />
+          </Switch>
+      </Router>
 
       <footer className="border-top footer text-muted">
         <div className="container">
